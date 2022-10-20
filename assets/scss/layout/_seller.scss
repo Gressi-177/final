@@ -1,0 +1,131 @@
+.top-seller {
+  padding-top: 80px;
+  overflow: hidden;
+
+  .title {
+    display: inline-block;
+    color: $color-white;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .nice-select {
+    padding-left: 20px;
+    padding-right: 40px;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    cursor: pointer;
+    .current {
+      font-size: 24px;
+      font-weight: 700;
+      color: $color-primary;
+    }
+    .arrows {
+      color: $color-primary;
+      font-size: 18px;
+    }
+  }
+  .list-sell {
+    padding-top: 20px;
+  }
+  .sell {
+    &-item {
+      margin-top: 30px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+        .rank {
+          transform: translateY(-50%) scale(0.7);
+        }
+      }
+    }
+    &-avatar {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid $color-border;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: 0.4s;
+      }
+    }
+    &-content {
+      margin-left: 12px;
+    }
+    &-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-white;
+    }
+    &-price {
+      font-size: 14px;
+    }
+  }
+  .tick {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    background-color: $color-primary;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-size: 12px;
+  }
+  .rank {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: $color-body;
+    opacity: 0.1;
+    font-weight: 700;
+    line-height: 1;
+    transition: 0.4s;
+  }
+  @include maxWidth(478px) {
+    .list-sell {
+      justify-content: center;
+    }
+    .sell-top {
+      text-align: center;
+    }
+
+    .sell-item {
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .sell-content {
+      text-align: center;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    .sell-name {
+      font-size: 16px;
+    }
+
+    .rank {
+      font-size: 40px;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.banner {
+  padding-top: 100px;
+  .title-badge {
+    background-color: transparent;
+    color: $color-primary;
+    padding: 0 26px;
+    margin-bottom: 15px;
+    border: 1px solid $color-border;
+    border-radius: 20px;
+    min-width: 95px;
+    height: 46px;
+    display: inline-block;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+  }
+
+  .title {
+    color: $color-white;
+    font-size: 70px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  .desc {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: $color-body;
+    padding-right: 30px;
+  }
+  .button-group {
+    a.btn {
+      margin: 7px;
+      font-weight: 500;
+      transition: all 0.25s linear;
+      border: 0;
+      &:first-child {
+        margin-left: 0;
+        &:hover {
+          background-color: $color-primary-alta;
+        }
+      }
+      &:last-child {
+        &:hover {
+          background-color: $color-primary;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .slider {
+    padding: 15px;
+    background: $background-color-1;
+
+    .slider-item {
+      position: relative;
+      .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 25px;
+        h5 {
+          font-size: 30px;
+          color: $color-white;
+        }
+        span {
+          font-size: 14px;
+          color: $color-primary;
+        }
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.25s linear;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      position: absolute;
+      bottom: 44px;
+      right: 30px;
+      li {
+        margin: 0 5px;
+        button {
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: $color-primary-alta;
+          overflow: hidden;
+          font-size: 0;
+          outline: none;
+          border: 2px solid transparent;
+        }
+      }
+      .slick-active {
+        button {
+          border-color: $color-primary;
+          background: transparent;
+        }
+      }
+    }
+  }
+  @include maxWidth(992px) {
+    padding-top: 80px;
+    .title {
+      font-size: 40px;
+    }
+  }
+  @include maxWidth(479px) {
+    .title {
+      font-size: 30px;
+    }
+    .desc {
+      margin: 20px 0;
+    }
+  }
+}
