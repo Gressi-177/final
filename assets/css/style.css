@@ -1430,6 +1430,9 @@ header .nav-desk .header-right {
 .service .list-service {
   padding-top: 50px;
 }
+.service .list-service .col {
+  padding: 0 15px;
+}
 .service .service-item {
   border-radius: 10px;
   position: relative;
