@@ -344,6 +344,11 @@ body::before {
   opacity: 0.05;
 }
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1440px !important;
+  }
+}
 ul {
   list-style: none;
 }
@@ -1202,6 +1207,7 @@ header .nav-desk .header-right {
   padding: 44px 0;
 }
 .explore-product .title {
+  width: 100%;
   font-size: 32px;
   color: #ffffff;
   font-weight: 700;
@@ -1304,12 +1310,6 @@ header .nav-desk .header-right {
 .top-seller {
   padding-top: 80px;
   overflow: hidden;
-}
-.top-seller .title {
-  display: inline-block;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 700;
 }
 .top-seller .nice-select {
   padding-left: 20px;
@@ -1422,4 +1422,62 @@ header .nav-desk .header-right {
     font-size: 40px;
     right: 0;
   }
+}
+
+.service {
+  padding-top: 100px;
+}
+.service .list-service {
+  padding-top: 50px;
+}
+.service .service-item {
+  border-radius: 10px;
+  position: relative;
+  margin-top: 30px;
+  transition: 0.3s;
+  background-color: rgba(36, 36, 53, 0.3411764706);
+}
+.service .service-item:hover .item-inner {
+  transform: translateY(-5px);
+}
+.service .service-item:hover .name,
+.service .service-item:hover .more {
+  color: #00a3ff;
+}
+.service .item-inner {
+  padding: 34px 30px 40px;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+.service .step {
+  text-transform: uppercase;
+}
+.service .content {
+  padding-top: 40px;
+}
+.service .content .name {
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.service .content .desc {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 28px;
+}
+.service .content .more {
+  font-size: 24px;
+  transition: 0.3s;
+  line-height: 24px;
+}
+.service .logo {
+  position: absolute;
+  top: -30px;
+  right: -15px;
+  transition: 0.3s;
+}
+.service .logo img {
+  max-height: 85px;
 }/*# sourceMappingURL=style.css.map */
