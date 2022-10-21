@@ -61,4 +61,8 @@
   .slick-next {
     right: 20px;
   }
+
+  @include maxWidth(576px) {
+    padding-top: 80px;
+  }
 }

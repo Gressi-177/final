@@ -31,6 +31,13 @@ body {
     max-width: 1440px !important;
   }
 }
+
+@include maxWidth(576px) {
+  .container {
+    padding: 2px 16px;
+  }
+}
+
 ul {
   list-style: none;
 }

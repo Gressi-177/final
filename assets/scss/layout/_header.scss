@@ -273,6 +273,9 @@ header {
       }
     }
   }
+  @include maxWidth(1200px) {
+    position: relative !important;
+  }
 }
 
 .menu-mobile {
