@@ -139,7 +139,9 @@ footer {
 .copy-right {
   padding: 20px 0;
   border-top: 1px solid $color-border;
-
+  .row {
+    align-items: center;
+  }
   .left {
     span {
       font-size: 16px;
