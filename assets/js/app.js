@@ -13,7 +13,7 @@ function clickProgress() {
 }
 
 scrollProgress.addEventListener("click", () => {
-  scrollInterval = setInterval(clickProgress, 10);
+  scrollInterval = setInterval(clickProgress, 5);
 });
 
 window.addEventListener("scroll", function () {
@@ -79,6 +79,7 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 1,
           arrows: false,
+          dots: true,
         },
       },
     ],
@@ -121,4 +122,50 @@ window.addEventListener("click", (e) => {
       item.classList.remove("open");
     }
   });
+});
+
+// Count down
+window.addEventListener("load", function () {
+  const daysText = document.querySelectorAll(".days ");
+  const hoursText = document.querySelectorAll(".hours ");
+  const minutesText = document.querySelectorAll(".minutes ");
+  const secondsText = document.querySelectorAll(".seconds ");
+  function countdown(date) {
+    const endDate = new Date(date).getTime();
+    let curentDate = new Date().getTime();
+    if (isNaN(endDate) || endDate - curentDate <= 0) return;
+    setInterval(function () {
+      caculate();
+    }, 1000);
+    function caculate() {
+      let day, hour, minute, second;
+      const now = new Date();
+      const starDate = now.getTime();
+      let timeRemaining = parseInt((endDate - starDate) / 1000);
+      if (timeRemaining > 0) {
+        day = parseInt(timeRemaining / 86400);
+        timeRemaining = timeRemaining % 86400;
+        hour = parseInt(timeRemaining / 3600);
+        timeRemaining = timeRemaining % 3600;
+        minute = parseInt(timeRemaining / 60);
+        timeRemaining = timeRemaining % 60;
+        second = parseInt(timeRemaining);
+        [...daysText].forEach(
+          (item) => (item.textContent = `0${day}`.slice(-2))
+        );
+        [...hoursText].forEach(
+          (item) => (item.textContent = `0${hour}`.slice(-2))
+        );
+        [...minutesText].forEach(
+          (item) => (item.textContent = `0${minute}`.slice(-2))
+        );
+        [...secondsText].forEach(
+          (item) => (item.textContent = `0${second}`.slice(-2))
+        );
+      } else {
+        return;
+      }
+    }
+  }
+  countdown("Thu Oct 20 2023 23:57:10 GMT+0700 (Indochina Time)");
 });

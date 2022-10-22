@@ -1,4 +1,6 @@
 .live-bidding {
+  padding-top: 100px;
+
   .live-title {
     position: relative;
     font-size: 32px;
@@ -34,6 +36,13 @@
       animation: customOne 1s infinite;
     }
   }
+  .live-slider .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -20px;
+  }
   .slick-arrow {
     width: 50px;
     height: 50px;
@@ -64,5 +73,16 @@
 
   @include maxWidth(576px) {
     padding-top: 80px;
+  }
+
+  .product-item .thumbail::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(180deg, transparent, black);
+    z-index: 1;
   }
 }

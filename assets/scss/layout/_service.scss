@@ -10,9 +10,10 @@
   .service-item {
     border-radius: 10px;
     position: relative;
-    margin-top: 30px;
+    margin-top: 40px;
     transition: 0.3s;
     background-color: $background-color-1;
+
     &:hover {
       .item-inner {
         transform: translateY(-5px);
@@ -40,6 +41,7 @@
       font-size: 24px;
       color: $color-white;
       transition: 0.3s;
+      @include textClamp(1);
     }
 
     .desc {
@@ -47,6 +49,7 @@
       margin-bottom: 30px;
       font-size: 16px;
       line-height: 28px;
+      @include textClamp(3);
     }
     .more {
       font-size: 24px;

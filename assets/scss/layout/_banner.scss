@@ -86,25 +86,6 @@
       position: absolute;
       bottom: 44px;
       right: 30px;
-      li {
-        margin: 0 5px;
-        button {
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: $color-primary-alta;
-          overflow: hidden;
-          font-size: 0;
-          outline: none;
-          border: 2px solid transparent;
-        }
-      }
-      .slick-active {
-        button {
-          border-color: $color-primary;
-          background: transparent;
-        }
-      }
     }
   }
   @include maxWidth(992px) {
